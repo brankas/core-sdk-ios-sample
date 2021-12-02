@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Tap Framework",
+        "repositoryURL": "https://github.com/brankas/core-sdk-ios",
+        "state": {
+          "branch": "master",
+          "revision": "6758f7a7e689e6601ebe9929b490699a9a8b79b2",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
