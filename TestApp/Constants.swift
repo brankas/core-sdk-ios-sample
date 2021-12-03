@@ -9,5 +9,4 @@ import Foundation
 
 struct Constants {
     static let API_KEY = ""
-    static let DESTINATION_ACCOUNT_ID = ""
 }

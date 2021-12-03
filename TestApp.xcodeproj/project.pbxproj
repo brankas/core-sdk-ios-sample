@@ -13,7 +13,7 @@
 		8E06A5C6256DEAFC009004DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E06A5C4256DEAFC009004DD /* Main.storyboard */; };
 		8E06A5C8256DEAFC009004DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E06A5C7256DEAFC009004DD /* Assets.xcassets */; };
 		8E06A5CB256DEAFC009004DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E06A5C9256DEAFC009004DD /* LaunchScreen.storyboard */; };
-		8E9AD975274E5C4900816B89 /* DirectTap in Frameworks */ = {isa = PBXBuildFile; productRef = 8E9AD974274E5C4900816B89 /* DirectTap */; };
+		8E9031BB2759E1F200A639DC /* StatementTap in Frameworks */ = {isa = PBXBuildFile; productRef = 8E9031BA2759E1F200A639DC /* StatementTap */; };
 		8EE1C1512583070C00FCB79C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE1C1502583070C00FCB79C /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E9AD975274E5C4900816B89 /* DirectTap in Frameworks */,
+				8E9031BB2759E1F200A639DC /* StatementTap in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,7 +111,7 @@
 			);
 			name = TestApp;
 			packageProductDependencies = (
-				8E9AD974274E5C4900816B89 /* DirectTap */,
+				8E9031BA2759E1F200A639DC /* StatementTap */,
 			);
 			productName = TestApp;
 			productReference = 8E06A5BB256DEAFC009004DD /* TestApp.app */;
@@ -340,7 +340,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/TestApp/lib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.brankas.DirectTestApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brankas.StatementTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INCLUDE_PATHS = "$(inherited) $(PROJECT_DIR)/TestApp/lib";
 				SWIFT_VERSION = 5.0;
@@ -374,7 +374,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/TestApp/lib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.brankas.DirectTestApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brankas.StatementTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INCLUDE_PATHS = "$(inherited) $(PROJECT_DIR)/TestApp/lib";
 				SWIFT_VERSION = 5.0;
@@ -418,10 +418,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8E9AD974274E5C4900816B89 /* DirectTap */ = {
+		8E9031BA2759E1F200A639DC /* StatementTap */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8E75BCFE274E50120033DE37 /* XCRemoteSwiftPackageReference "core-sdk-ios" */;
-			productName = DirectTap;
+			productName = StatementTap;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
