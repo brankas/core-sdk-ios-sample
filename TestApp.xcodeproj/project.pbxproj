@@ -13,7 +13,7 @@
 		8E06A5C6256DEAFC009004DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E06A5C4256DEAFC009004DD /* Main.storyboard */; };
 		8E06A5C8256DEAFC009004DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E06A5C7256DEAFC009004DD /* Assets.xcassets */; };
 		8E06A5CB256DEAFC009004DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E06A5C9256DEAFC009004DD /* LaunchScreen.storyboard */; };
-		8E9AD975274E5C4900816B89 /* DirectTap in Frameworks */ = {isa = PBXBuildFile; productRef = 8E9AD974274E5C4900816B89 /* DirectTap */; };
+		8EA7BA1A27B0EB0D0079BE3A /* DirectTap in Frameworks */ = {isa = PBXBuildFile; productRef = 8EA7BA1927B0EB0D0079BE3A /* DirectTap */; };
 		8EE1C1512583070C00FCB79C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE1C1502583070C00FCB79C /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E9AD975274E5C4900816B89 /* DirectTap in Frameworks */,
+				8EA7BA1A27B0EB0D0079BE3A /* DirectTap in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,7 +111,7 @@
 			);
 			name = TestApp;
 			packageProductDependencies = (
-				8E9AD974274E5C4900816B89 /* DirectTap */,
+				8EA7BA1927B0EB0D0079BE3A /* DirectTap */,
 			);
 			productName = TestApp;
 			productReference = 8E06A5BB256DEAFC009004DD /* TestApp.app */;
@@ -141,7 +141,7 @@
 			);
 			mainGroup = 8E06A5B2256DEAFB009004DD;
 			packageReferences = (
-				8E75BCFE274E50120033DE37 /* XCRemoteSwiftPackageReference "core-sdk-ios" */,
+				8EA7BA1827B0EB0D0079BE3A /* XCRemoteSwiftPackageReference "core-sdk-ios" */,
 			);
 			productRefGroup = 8E06A5BC256DEAFC009004DD /* Products */;
 			projectDirPath = "";
@@ -407,7 +407,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8E75BCFE274E50120033DE37 /* XCRemoteSwiftPackageReference "core-sdk-ios" */ = {
+		8EA7BA1827B0EB0D0079BE3A /* XCRemoteSwiftPackageReference "core-sdk-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/brankas/core-sdk-ios";
 			requirement = {
@@ -418,9 +418,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8E9AD974274E5C4900816B89 /* DirectTap */ = {
+		8EA7BA1927B0EB0D0079BE3A /* DirectTap */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8E75BCFE274E50120033DE37 /* XCRemoteSwiftPackageReference "core-sdk-ios" */;
+			package = 8EA7BA1827B0EB0D0079BE3A /* XCRemoteSwiftPackageReference "core-sdk-ios" */;
 			productName = DirectTap;
 		};
 /* End XCSwiftPackageProductDependency section */

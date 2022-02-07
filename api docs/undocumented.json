@@ -1,0 +1,2217 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/core/CheckDelegate.swift",
+      "line": 10,
+      "symbol": "CheckDelegate",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/core/CheckDelegate.swift",
+      "line": 11,
+      "symbol": "CheckDelegate.hasCheckError()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/core/CoreDelegate.swift",
+      "line": 10,
+      "symbol": "CoreDelegate",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/core/CoreDelegate.swift",
+      "line": 11,
+      "symbol": "CoreDelegate.T",
+      "symbol_kind": "source.lang.swift.decl.associatedtype",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/core/CoreDelegate.swift",
+      "line": 12,
+      "symbol": "CoreDelegate.onResult(data:error:errorCode:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Account.swift",
+      "line": 10,
+      "symbol": "Account",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Account.swift",
+      "line": 16,
+      "symbol": "Account.init(country:bankCode:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Address.swift",
+      "line": 10,
+      "symbol": "Address",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Address.swift",
+      "line": 11,
+      "symbol": "Address.addressLine1",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Address.swift",
+      "line": 12,
+      "symbol": "Address.addressLine2",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Address.swift",
+      "line": 13,
+      "symbol": "Address.city",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Address.swift",
+      "line": 14,
+      "symbol": "Address.province",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Address.swift",
+      "line": 15,
+      "symbol": "Address.country",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Address.swift",
+      "line": 16,
+      "symbol": "Address.zipCode",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Address.swift",
+      "line": 18,
+      "symbol": "Address.init(addressLine1:addressLine2:city:province:country:zipCode:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Amount.swift",
+      "line": 9,
+      "symbol": "Amount",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Amount.swift",
+      "line": 10,
+      "symbol": "Amount.currency",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Amount.swift",
+      "line": 11,
+      "symbol": "Amount.numInCents",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Amount.swift",
+      "line": 13,
+      "symbol": "Amount.init(currency:numInCents:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/BankCode.swift",
+      "line": 10,
+      "symbol": "BankCode",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Client.swift",
+      "line": 9,
+      "symbol": "Client",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Client.swift",
+      "line": 21,
+      "symbol": "Client.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Country.swift",
+      "line": 10,
+      "symbol": "Country",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 10,
+      "symbol": "Currency",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 11,
+      "symbol": "Currency.afn",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 12,
+      "symbol": "Currency.eur",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 13,
+      "symbol": "Currency.all",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 14,
+      "symbol": "Currency.dzd",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 15,
+      "symbol": "Currency.usd",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 16,
+      "symbol": "Currency.aoa",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 17,
+      "symbol": "Currency.xcd",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 18,
+      "symbol": "Currency.ars",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 19,
+      "symbol": "Currency.amd",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 20,
+      "symbol": "Currency.awg",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 21,
+      "symbol": "Currency.aud",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 22,
+      "symbol": "Currency.azn",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 23,
+      "symbol": "Currency.bsd",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 24,
+      "symbol": "Currency.bhd",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 25,
+      "symbol": "Currency.bdt",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 26,
+      "symbol": "Currency.byr",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 27,
+      "symbol": "Currency.bzd",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 28,
+      "symbol": "Currency.xof",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 29,
+      "symbol": "Currency.bmd",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 30,
+      "symbol": "Currency.btn",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 31,
+      "symbol": "Currency.bov",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 32,
+      "symbol": "Currency.bam",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 33,
+      "symbol": "Currency.bwp",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 34,
+      "symbol": "Currency.nok",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 35,
+      "symbol": "Currency.brl",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 36,
+      "symbol": "Currency.sgd",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 37,
+      "symbol": "Currency.bgn",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 38,
+      "symbol": "Currency.bif",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 39,
+      "symbol": "Currency.khr",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 40,
+      "symbol": "Currency.xaf",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 41,
+      "symbol": "Currency.cad",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 42,
+      "symbol": "Currency.cve",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 43,
+      "symbol": "Currency.kyd",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 44,
+      "symbol": "Currency.clp",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 45,
+      "symbol": "Currency.cny",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 46,
+      "symbol": "Currency.cop",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 47,
+      "symbol": "Currency.kmf",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 48,
+      "symbol": "Currency.cdf",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 49,
+      "symbol": "Currency.nzd",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 50,
+      "symbol": "Currency.crc",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 51,
+      "symbol": "Currency.hrk",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 52,
+      "symbol": "Currency.cuc",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 53,
+      "symbol": "Currency.czk",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 54,
+      "symbol": "Currency.dkk",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 55,
+      "symbol": "Currency.djf",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 56,
+      "symbol": "Currency.dop",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 57,
+      "symbol": "Currency.egp",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 58,
+      "symbol": "Currency.ern",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 59,
+      "symbol": "Currency.etb",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 60,
+      "symbol": "Currency.fkp",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 61,
+      "symbol": "Currency.fjd",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 62,
+      "symbol": "Currency.xpf",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 63,
+      "symbol": "Currency.gmd",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 64,
+      "symbol": "Currency.gel",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 65,
+      "symbol": "Currency.ghs",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 66,
+      "symbol": "Currency.gip",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 67,
+      "symbol": "Currency.gtq",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 68,
+      "symbol": "Currency.gbp",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 69,
+      "symbol": "Currency.gnf",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 70,
+      "symbol": "Currency.gyd",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 71,
+      "symbol": "Currency.hnl",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 72,
+      "symbol": "Currency.hkd",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 73,
+      "symbol": "Currency.huf",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 74,
+      "symbol": "Currency.isk",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 75,
+      "symbol": "Currency.inr",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 76,
+      "symbol": "Currency.idr",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 77,
+      "symbol": "Currency.irr",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 78,
+      "symbol": "Currency.iqd",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 79,
+      "symbol": "Currency.imp",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 80,
+      "symbol": "Currency.ils",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 81,
+      "symbol": "Currency.jmd",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 82,
+      "symbol": "Currency.jpy",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 83,
+      "symbol": "Currency.jep",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 84,
+      "symbol": "Currency.jod",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 85,
+      "symbol": "Currency.kzt",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 86,
+      "symbol": "Currency.kes",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 87,
+      "symbol": "Currency.kpw",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 88,
+      "symbol": "Currency.krw",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 89,
+      "symbol": "Currency.kwd",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 90,
+      "symbol": "Currency.kgs",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 91,
+      "symbol": "Currency.lak",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 92,
+      "symbol": "Currency.lbp",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 93,
+      "symbol": "Currency.lsl",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 94,
+      "symbol": "Currency.lrd",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 95,
+      "symbol": "Currency.lyd",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 96,
+      "symbol": "Currency.chf",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 97,
+      "symbol": "Currency.mkd",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 98,
+      "symbol": "Currency.mga",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 99,
+      "symbol": "Currency.mwk",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 100,
+      "symbol": "Currency.myr",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 101,
+      "symbol": "Currency.mvr",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 102,
+      "symbol": "Currency.mro",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 103,
+      "symbol": "Currency.mur",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 104,
+      "symbol": "Currency.mxn",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 105,
+      "symbol": "Currency.mdl",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 106,
+      "symbol": "Currency.mnt",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 107,
+      "symbol": "Currency.mad",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 108,
+      "symbol": "Currency.mzn",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 109,
+      "symbol": "Currency.mmk",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 110,
+      "symbol": "Currency.nad",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 111,
+      "symbol": "Currency.npr",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 112,
+      "symbol": "Currency.ang",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 113,
+      "symbol": "Currency.nio",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 114,
+      "symbol": "Currency.ngn",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 115,
+      "symbol": "Currency.omr",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 116,
+      "symbol": "Currency.pkr",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 117,
+      "symbol": "Currency.pgk",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 118,
+      "symbol": "Currency.pyg",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 119,
+      "symbol": "Currency.pen",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 120,
+      "symbol": "Currency.php",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 121,
+      "symbol": "Currency.pln",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 122,
+      "symbol": "Currency.qar",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 123,
+      "symbol": "Currency.ron",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 124,
+      "symbol": "Currency.rub",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 125,
+      "symbol": "Currency.rwf",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 126,
+      "symbol": "Currency.wst",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 127,
+      "symbol": "Currency.std",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 128,
+      "symbol": "Currency.sar",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 129,
+      "symbol": "Currency.rsd",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 130,
+      "symbol": "Currency.scr",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 131,
+      "symbol": "Currency.sll",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 132,
+      "symbol": "Currency.sbd",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 133,
+      "symbol": "Currency.sos",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 134,
+      "symbol": "Currency.zar",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 135,
+      "symbol": "Currency.ssp",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 136,
+      "symbol": "Currency.lkr",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 137,
+      "symbol": "Currency.shp",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 138,
+      "symbol": "Currency.sdg",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 139,
+      "symbol": "Currency.srd",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 140,
+      "symbol": "Currency.szl",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 141,
+      "symbol": "Currency.sek",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 142,
+      "symbol": "Currency.syp",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 143,
+      "symbol": "Currency.twd",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 144,
+      "symbol": "Currency.tjs",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 145,
+      "symbol": "Currency.tzs",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 146,
+      "symbol": "Currency.thb",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 147,
+      "symbol": "Currency.top",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 148,
+      "symbol": "Currency.ttd",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 149,
+      "symbol": "Currency.tnd",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 150,
+      "symbol": "Currency.try",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 151,
+      "symbol": "Currency.tmt",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 152,
+      "symbol": "Currency.ugx",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 153,
+      "symbol": "Currency.uah",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 154,
+      "symbol": "Currency.are",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 155,
+      "symbol": "Currency.uyu",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 156,
+      "symbol": "Currency.uzs",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 157,
+      "symbol": "Currency.vuv",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 158,
+      "symbol": "Currency.vef",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 159,
+      "symbol": "Currency.vnd",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 160,
+      "symbol": "Currency.yer",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 161,
+      "symbol": "Currency.zrn",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Currency.swift",
+      "line": 162,
+      "symbol": "Currency.zmw",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Customer.swift",
+      "line": 9,
+      "symbol": "Customer",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Customer.swift",
+      "line": 10,
+      "symbol": "Customer.firstName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Customer.swift",
+      "line": 11,
+      "symbol": "Customer.lastName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Customer.swift",
+      "line": 12,
+      "symbol": "Customer.email",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Customer.swift",
+      "line": 13,
+      "symbol": "Customer.mobileNumber",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Customer.swift",
+      "line": 14,
+      "symbol": "Customer.address",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Customer.swift",
+      "line": 16,
+      "symbol": "Customer.init(firstName:lastName:email:mobileNumber:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 10,
+      "symbol": "DirectErrorCode",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 13,
+      "symbol": "DirectErrorCode.DIRIBDO4002",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 14,
+      "symbol": "DirectErrorCode.DIRIBDO4003",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 15,
+      "symbol": "DirectErrorCode.DIRIBDO4004",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 16,
+      "symbol": "DirectErrorCode.DIRIBDO4005",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 17,
+      "symbol": "DirectErrorCode.DIRIBDO4006",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 18,
+      "symbol": "DirectErrorCode.DIRIBDO4007",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 19,
+      "symbol": "DirectErrorCode.DIRIBDO4008",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 20,
+      "symbol": "DirectErrorCode.DIRIBDO4009",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 21,
+      "symbol": "DirectErrorCode.DIRIBDO4010",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 22,
+      "symbol": "DirectErrorCode.DIRIBDO4011",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 23,
+      "symbol": "DirectErrorCode.DIRIBDO4012",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 24,
+      "symbol": "DirectErrorCode.DIRIBDO4013",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 25,
+      "symbol": "DirectErrorCode.DIRIBDO4014",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 26,
+      "symbol": "DirectErrorCode.DIRIBDO4015",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 27,
+      "symbol": "DirectErrorCode.DIRIBDO4016",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 28,
+      "symbol": "DirectErrorCode.DIRIBDO4017",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 29,
+      "symbol": "DirectErrorCode.DIRIBDO4018",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 30,
+      "symbol": "DirectErrorCode.DIRIBDO4019",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 31,
+      "symbol": "DirectErrorCode.DIRIBDO4020",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 32,
+      "symbol": "DirectErrorCode.DIRIBDO4021",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 33,
+      "symbol": "DirectErrorCode.DIRIBDO4022",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 34,
+      "symbol": "DirectErrorCode.DIRIBDO4023",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 35,
+      "symbol": "DirectErrorCode.DIRIBDO4024",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 36,
+      "symbol": "DirectErrorCode.DIRIBDO4025",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 37,
+      "symbol": "DirectErrorCode.DIRIBDO4026",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 38,
+      "symbol": "DirectErrorCode.DIRIBDO4027",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 39,
+      "symbol": "DirectErrorCode.DIRIBDO4028",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 40,
+      "symbol": "DirectErrorCode.DIRIBDO4029",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 41,
+      "symbol": "DirectErrorCode.DIRIBDO4030",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 42,
+      "symbol": "DirectErrorCode.DIRIBDO4031",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 43,
+      "symbol": "DirectErrorCode.DIRIBDO4032",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 44,
+      "symbol": "DirectErrorCode.DIRIBDO4033",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 45,
+      "symbol": "DirectErrorCode.DIRIBDO4034",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 46,
+      "symbol": "DirectErrorCode.DIRIBDO4035",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 47,
+      "symbol": "DirectErrorCode.DIRIBDO4037",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 49,
+      "symbol": "DirectErrorCode.DIRIBDO5002",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 50,
+      "symbol": "DirectErrorCode.DIRIBDO5003",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 51,
+      "symbol": "DirectErrorCode.DIRIBDO5004",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 52,
+      "symbol": "DirectErrorCode.DIRIBDO5005",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 53,
+      "symbol": "DirectErrorCode.DIRIBDO5006",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 54,
+      "symbol": "DirectErrorCode.DIRIBDO5007",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 55,
+      "symbol": "DirectErrorCode.DIRIBDO5008",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 56,
+      "symbol": "DirectErrorCode.DIRIBDO5009",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 57,
+      "symbol": "DirectErrorCode.DIRIBDO5010",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 58,
+      "symbol": "DirectErrorCode.DIRIBDO5011",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 59,
+      "symbol": "DirectErrorCode.DIRIBDO5012",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 60,
+      "symbol": "DirectErrorCode.DIRIBDO5013",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 61,
+      "symbol": "DirectErrorCode.DIRIBDO5014",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 62,
+      "symbol": "DirectErrorCode.DIRIBDO5015",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 63,
+      "symbol": "DirectErrorCode.DIRIBDO5016",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 65,
+      "symbol": "DirectErrorCode.DIRIBDO6001",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 66,
+      "symbol": "DirectErrorCode.DIRIBDO6002",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 67,
+      "symbol": "DirectErrorCode.DIRIBDO6003",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 68,
+      "symbol": "DirectErrorCode.DIRIBDO6004",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 69,
+      "symbol": "DirectErrorCode.DIRIBDO6005",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 70,
+      "symbol": "DirectErrorCode.DIRIBDO6006",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 71,
+      "symbol": "DirectErrorCode.DIRIBDO6007",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 72,
+      "symbol": "DirectErrorCode.DIRIBDO6008",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 73,
+      "symbol": "DirectErrorCode.DIRIBDO6009",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 74,
+      "symbol": "DirectErrorCode.DIRIBDO6010",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 75,
+      "symbol": "DirectErrorCode.DIRIBDO6011",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 76,
+      "symbol": "DirectErrorCode.DIRIBDO6012",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 77,
+      "symbol": "DirectErrorCode.DIRIBDO6013",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 78,
+      "symbol": "DirectErrorCode.DIRIBDO6014",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 79,
+      "symbol": "DirectErrorCode.DIRIBDO6015",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 80,
+      "symbol": "DirectErrorCode.DIRIBDO6016",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 81,
+      "symbol": "DirectErrorCode.DIRIBDO6017",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 82,
+      "symbol": "DirectErrorCode.DIRIBDO6018",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 83,
+      "symbol": "DirectErrorCode.DIRIBDO6019",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 84,
+      "symbol": "DirectErrorCode.DIRIBDO6020",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 88,
+      "symbol": "DirectErrorCode.DIRIBPI4002",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 89,
+      "symbol": "DirectErrorCode.DIRIBPI4003",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 90,
+      "symbol": "DirectErrorCode.DIRIBPI4004",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 91,
+      "symbol": "DirectErrorCode.DIRIBPI4005",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 92,
+      "symbol": "DirectErrorCode.DIRIBPI4006",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 93,
+      "symbol": "DirectErrorCode.DIRIBPI4007",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 94,
+      "symbol": "DirectErrorCode.DIRIBPI4008",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 95,
+      "symbol": "DirectErrorCode.DIRIBPI4009",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 96,
+      "symbol": "DirectErrorCode.DIRIBPI4010",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 97,
+      "symbol": "DirectErrorCode.DIRIBPI4011",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 98,
+      "symbol": "DirectErrorCode.DIRIBPI4012",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 99,
+      "symbol": "DirectErrorCode.DIRIBPI4013",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 100,
+      "symbol": "DirectErrorCode.DIRIBPI4014",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 101,
+      "symbol": "DirectErrorCode.DIRIBPI4015",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 102,
+      "symbol": "DirectErrorCode.DIRIBPI4016",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 103,
+      "symbol": "DirectErrorCode.DIRIBPI5001",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 104,
+      "symbol": "DirectErrorCode.DIRIBPI5002",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 105,
+      "symbol": "DirectErrorCode.DIRIBPI5003",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 106,
+      "symbol": "DirectErrorCode.DIRIBPI5004",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 107,
+      "symbol": "DirectErrorCode.DIRIBPI5005",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 108,
+      "symbol": "DirectErrorCode.DIRIBPI5006",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 109,
+      "symbol": "DirectErrorCode.DIRIBPI5007",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 110,
+      "symbol": "DirectErrorCode.DIRIBPI5008",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 111,
+      "symbol": "DirectErrorCode.DIRIBPI5009",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 112,
+      "symbol": "DirectErrorCode.DIRIBPI5011",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 113,
+      "symbol": "DirectErrorCode.DIRIBPI5013",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 114,
+      "symbol": "DirectErrorCode.DIRIBPI5014",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 115,
+      "symbol": "DirectErrorCode.DIRIBPI5015",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 116,
+      "symbol": "DirectErrorCode.DIRIBPI5016",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 117,
+      "symbol": "DirectErrorCode.DIRIBPI5017",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 118,
+      "symbol": "DirectErrorCode.DIRIBPI5018",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 119,
+      "symbol": "DirectErrorCode.DIRIBPI5019",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 120,
+      "symbol": "DirectErrorCode.DIRIBPI5020",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 121,
+      "symbol": "DirectErrorCode.DIRIBPI5021",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 122,
+      "symbol": "DirectErrorCode.DIRIBPI6001",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 123,
+      "symbol": "DirectErrorCode.DIRIBPI6003",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 124,
+      "symbol": "DirectErrorCode.DIRIBPI6004",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 125,
+      "symbol": "DirectErrorCode.DIRIBPI6005",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 126,
+      "symbol": "DirectErrorCode.DIRIBPI6006",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 127,
+      "symbol": "DirectErrorCode.DIRIBPI6007",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 128,
+      "symbol": "DirectErrorCode.DIRIBPI6008",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 129,
+      "symbol": "DirectErrorCode.DIRIBPI6009",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 130,
+      "symbol": "DirectErrorCode.DIRIBPI6010",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 131,
+      "symbol": "DirectErrorCode.DIRIBPI6011",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 132,
+      "symbol": "DirectErrorCode.DIRIBPI6012",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectErrorCode.swift",
+      "line": 133,
+      "symbol": "DirectErrorCode.DIRIBPI6013",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectTapError.swift",
+      "line": 10,
+      "symbol": "DirectTapError",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectTapError.swift",
+      "line": 11,
+      "symbol": "DirectTapError.shared",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectTapRequest.swift",
+      "line": 10,
+      "symbol": "DirectTapRequest",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectTapSF.swift",
+      "line": 13,
+      "symbol": "DirectTapSF",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectTapSF.swift",
+      "line": 15,
+      "symbol": "DirectTapSF.shared",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectTapSF.swift",
+      "line": 214,
+      "symbol": "DirectTapSF.safariViewControllerDidFinish(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DirectTapSF.swift",
+      "line": 325,
+      "symbol": "DirectTapSF.TapError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DismissAlert.swift",
+      "line": 9,
+      "symbol": "DismissAlert",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/DismissAlert.swift",
+      "line": 17,
+      "symbol": "DismissAlert.init(message:confirmButtonText:cancelButtonText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Status.swift",
+      "line": 10,
+      "symbol": "Status",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Status.swift",
+      "line": 11,
+      "symbol": "Status.PENDING",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/Transaction.swift",
+      "line": 10,
+      "symbol": "Transaction",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/UniqueAmount.swift",
+      "line": 9,
+      "symbol": "UniqueAmount",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/UniqueAmount.swift",
+      "line": 10,
+      "symbol": "UniqueAmount.NONE",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/UniqueAmount.swift",
+      "line": 11,
+      "symbol": "UniqueAmount.ADD",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ejaytorres/core-sdk-ios/CoreFramework/tap/UniqueAmount.swift",
+      "line": 12,
+      "symbol": "UniqueAmount.SUBTRACT",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/ejaytorres/core-sdk-ios"
+}

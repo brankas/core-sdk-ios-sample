@@ -8,7 +8,7 @@
 import UIKit
 import DirectTapFramework
 
-class ViewController: UIViewController, CoreDelegate, CheckDelegate {
+class ViewController: UIViewController, CheckDelegate {
     typealias T = String
     
     override func viewDidLoad() {
@@ -34,7 +34,7 @@ class ViewController: UIViewController, CoreDelegate, CheckDelegate {
         components.minute = 00
         components.month = 12
         components.day = 6
-        components.year = 2021
+        components.year = 2022
         
         let date = Calendar.current.date(from: components)
 
@@ -44,25 +44,22 @@ class ViewController: UIViewController, CoreDelegate, CheckDelegate {
         request.useRememberMe = true
 
         do {
-            try DirectTapSF.shared.checkout(tapRequest: request, vc: self, delegate: self, showBackButton: false)
+            let retrieveTransactions = { (transaction: DirectTapFramework.Transaction?, error: String?) in
+                self.onResult(data: transaction, error: error)
+            }
+            try DirectTapSF.shared.checkout(tapRequest: request, vc: self, closure: retrieveTransactions, showBackButton: false)
         } catch {
             print("Error: \(error)")
         }
     }
     
-    func onResult(data: String?, error: String?, errorCode: String?) {
-        print("RESULT: \(data) \(error) \(errorCode)")
-        if let str = data {
-            print("TRANSACTION ID: \(str)")
+    func onResult(data: Transaction?, error: String?) {
+        if let transaction = data {
+            print("TRANSACTION ID: \(transaction.id)")
         }
         
         if let err = error {
-            if let errCode = errorCode {
-                print("Error Logs: \(err) \(errCode)")
-            }
-            else {
-                print("Error Logs: \(err)")
-            }
+            print("Error Logs: \(err)")
         }
     }
     

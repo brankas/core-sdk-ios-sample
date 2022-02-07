@@ -2,6 +2,39 @@
 
 All notable changes to this project will be documented in this file.
 
+## 3.0.0 - 2022-02-03
+
+### Changed
+
+- removed **None** option from **BrowserMode** enum
+- protocol **CoreDelegate** parameter to closure in both **checkout** and **checkoutWithinSameScreen** functions to make calling of the functions easier and more convenient
+
+### Added
+
+- separate function **retrieveCheckoutURL** to get the URL instead of launching within the internal WebView. This is a replacement to the **None** Option from **BrowserMode**
+- internal calling of **Retrieve Transaction** API Service to return the **Transaction** object every after Tap Web Session
+- **getSourceBanks()** function to retrieve all available source banks for the specified destination bank
+
+## 2.7.0 - 2022-01-26
+
+### Changed
+
+- made **terminate()** function private and explicitly called when Internal WebView is destroyed
+
+## 2.6.0 - 2022-01-13
+
+### Added
+
+- function for retrieving the current Framework Version
+- function for retrieving the Mobile Application Signature (Bundle Identifier and Seed ID)
+- support for transactional retries within the WebView
+
+## 2.5.0 - 2022-01-07
+
+### Fixed
+
+- End of transaction (success or failure) detection within the WebView for the new URL Format
+
 ## 2.4.0 - 2021-11-22
 
 ### Added
