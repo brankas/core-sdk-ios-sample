@@ -8,7 +8,7 @@
 import UIKit
 import StatementTapFramework
 
-class ViewController: UIViewController, CoreDelegate, CheckDelegate {
+class ViewController: UIViewController, CheckDelegate {
     typealias T = String
     
     override func viewDidLoad() {
@@ -22,22 +22,49 @@ class ViewController: UIViewController, CoreDelegate, CheckDelegate {
         
         StatementTapSF.shared.initialize(apiKey: Constants.API_KEY, certPath: nil, isDebug: false)
 
-        let request = StatementTapRequest(country: Country.PH, bankCodes: [BankCode.BDO], externalId: "External ID", successURL: "https://google.com", failURL: "https://hello.com", organizationName: "Organization Name", redirectDuration: 60, browserMode: StatementTapRequest.BrowserMode.WebView, dismissAlert: nil, useRememberMe: true)
+        let request = StatementTapRequest(country: Country.PH, bankCodes: [BankCode.BDO], externalId: "External ID", successURL: "https://google.com", failURL: "https://hello.com", organizationName: "Organization Name", redirectDuration: 60, browserMode: StatementTapRequest.BrowserMode.WebView, dismissAlert: nil, useRememberMe: false)
 
         do {
-            try StatementTapSF.shared.checkout(statementTapRequest: request, vc: self, delegate: self, showBackButton: false)
+            let retrieveStatements = { (data: Any?, error: String?) in
+                if let str = data as? String {
+                    if let err = error {
+                        print("Statement ID: \(str)\nError: \(err)")
+                    }
+                    else {
+                        print("Statement ID: \(str)")
+                    }
+                }
+                
+                else if let statements = data as? [Statement] {
+                    var message = "Statements"
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "MM-dd-yyyy"
+                    
+                    if statements.isEmpty {
+                        message += "\n\n\nList is Empty"
+                    }
+                    statements.forEach { statement in
+                        statement.transactions.forEach { transaction in
+                            let amount = transaction.amount
+                            message += "\n Account: \(statement.account.holderName)"
+                            message += "\n Transaction: (\(dateFormatter.string(from: transaction.date))) "
+                            message += String(describing: amount.currency)
+                            message += " \(Double(amount.numInCents) ?? 0 / 100)"
+                            message += " \(String(describing: transaction.type))"
+                        }
+                    }
+                   print(message)
+                }
+                
+                else {
+                    if let err = error {
+                        print("ERROR: \(err)")
+                    }
+                }
+            }
+            try StatementTapSF.shared.checkout(statementTapRequest: request, vc: self, closure: retrieveStatements, showBackButton: false)
         } catch {
             print("Error: \(error)")
-        }
-    }
-    
-    func onResult(data: String?, error: String?, errorCode: String?) {
-        if let str = data {
-            print("STATEMENT ID: \(str)")
-        }
-        
-        if let err = error {
-            print("Error Logs: \(err)")
         }
     }
     
