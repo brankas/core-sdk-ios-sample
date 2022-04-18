@@ -1,16 +1,14 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "Tap Framework",
-        "repositoryURL": "https://github.com/brankas/core-sdk-ios",
-        "state": {
-          "branch": "master",
-          "revision": "f822bcba9443493f834e83312886828db10ace98",
-          "version": null
-        }
+  "pins" : [
+    {
+      "identity" : "core-sdk-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/brankas/core-sdk-ios",
+      "state" : {
+        "branch" : "master",
+        "revision" : "b3d5fe98602328d1caea4f3409e0a08d319a7c0d"
       }
-    ]
-  },
-  "version": 1
+    }
+  ],
+  "version" : 2
 }
