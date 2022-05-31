@@ -22,7 +22,7 @@ class ViewController: UIViewController, CheckDelegate {
         
         StatementTapSF.shared.initialize(apiKey: Constants.API_KEY, certPath: nil, isDebug: false)
 
-        let request = StatementTapRequest(country: Country.PH, bankCodes: [BankCode.BDO], externalId: "External ID", successURL: "https://google.com", failURL: "https://hello.com", organizationName: "Organization Name", redirectDuration: 60, browserMode: StatementTapRequest.BrowserMode.WebView, dismissAlert: nil, useRememberMe: false, statementRetrievalRequest: StatementRetrievalRequest())
+        let request = StatementTapRequest(country: Country.PH, bankCodes: [StatementBankCode.BDO], externalId: "External ID", successURL: "https://google.com", failURL: "https://hello.com", organizationName: "Organization Name", redirectDuration: 60, browserMode: StatementTapRequest.BrowserMode.WebView, dismissAlert: nil, useRememberMe: false, statementRetrievalRequest: StatementRetrievalRequest())
 
         do {
             let retrieveStatements = { (data: Any?, error: String?) in
