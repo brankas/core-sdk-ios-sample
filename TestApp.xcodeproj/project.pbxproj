@@ -7,13 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E00943127CC6F7900E99725 /* StatementTap in Frameworks */ = {isa = PBXBuildFile; productRef = 8E00943027CC6F7900E99725 /* StatementTap */; };
+		000F5FB02847B35000AF0FBD /* CheckboxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000F5FAF2847B35000AF0FBD /* CheckboxButton.swift */; };
+		00AF44AB28353AA9003F2656 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 00AF44AA28353AA9003F2656 /* RxCocoa */; };
+		00AF44AD28353AA9003F2656 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 00AF44AC28353AA9003F2656 /* RxSwift */; };
+		00F45A902833D95400749BD7 /* TPKeyboardAvoiding in Frameworks */ = {isa = PBXBuildFile; productRef = 00F45A8F2833D95400749BD7 /* TPKeyboardAvoiding */; };
+		00F45A952833DD5400749BD7 /* Ubuntu-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00F45A922833DD5300749BD7 /* Ubuntu-Regular.ttf */; };
+		00F45A962833DD5400749BD7 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00F45A932833DD5300749BD7 /* Lato-Bold.ttf */; };
+		00F45A972833DD5400749BD7 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00F45A942833DD5400749BD7 /* Lato-Regular.ttf */; };
+		00F45A9A2833F98D00749BD7 /* SDWebImageSVGCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 00F45A992833F98D00749BD7 /* SDWebImageSVGCoder */; };
 		8E06A5BF256DEAFC009004DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E06A5BE256DEAFC009004DD /* AppDelegate.swift */; };
 		8E06A5C1256DEAFC009004DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E06A5C0256DEAFC009004DD /* SceneDelegate.swift */; };
 		8E06A5C3256DEAFC009004DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E06A5C2256DEAFC009004DD /* ViewController.swift */; };
 		8E06A5C6256DEAFC009004DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E06A5C4256DEAFC009004DD /* Main.storyboard */; };
 		8E06A5C8256DEAFC009004DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E06A5C7256DEAFC009004DD /* Assets.xcassets */; };
 		8E06A5CB256DEAFC009004DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E06A5C9256DEAFC009004DD /* LaunchScreen.storyboard */; };
+		8E90E3A42845FB2300C4AB07 /* BalanceTap in Frameworks */ = {isa = PBXBuildFile; productRef = 8E90E3A32845FB2300C4AB07 /* BalanceTap */; };
 		8EE1C1512583070C00FCB79C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE1C1502583070C00FCB79C /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +39,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		000F5FAF2847B35000AF0FBD /* CheckboxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxButton.swift; sourceTree = "<group>"; };
+		00F45A922833DD5300749BD7 /* Ubuntu-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Regular.ttf"; sourceTree = "<group>"; };
+		00F45A932833DD5300749BD7 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		00F45A942833DD5400749BD7 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		8E06A5BB256DEAFC009004DD /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E06A5BE256DEAFC009004DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E06A5C0256DEAFC009004DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,13 +59,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E00943127CC6F7900E99725 /* StatementTap in Frameworks */,
+				8E90E3A42845FB2300C4AB07 /* BalanceTap in Frameworks */,
+				00F45A9A2833F98D00749BD7 /* SDWebImageSVGCoder in Frameworks */,
+				00F45A902833D95400749BD7 /* TPKeyboardAvoiding in Frameworks */,
+				00AF44AD28353AA9003F2656 /* RxSwift in Frameworks */,
+				00AF44AB28353AA9003F2656 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00F45A912833DD2B00749BD7 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				00F45A932833DD5300749BD7 /* Lato-Bold.ttf */,
+				00F45A942833DD5400749BD7 /* Lato-Regular.ttf */,
+				00F45A922833DD5300749BD7 /* Ubuntu-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		8E06A5B2256DEAFB009004DD = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +100,7 @@
 		8E06A5BD256DEAFC009004DD /* TestApp */ = {
 			isa = PBXGroup;
 			children = (
+				00F45A912833DD2B00749BD7 /* Fonts */,
 				8E06A5BE256DEAFC009004DD /* AppDelegate.swift */,
 				8E06A5C0256DEAFC009004DD /* SceneDelegate.swift */,
 				8E06A5C2256DEAFC009004DD /* ViewController.swift */,
@@ -82,6 +109,7 @@
 				8E06A5C9256DEAFC009004DD /* LaunchScreen.storyboard */,
 				8E06A5CC256DEAFC009004DD /* Info.plist */,
 				8EE1C1502583070C00FCB79C /* Constants.swift */,
+				000F5FAF2847B35000AF0FBD /* CheckboxButton.swift */,
 			);
 			path = TestApp;
 			sourceTree = "<group>";
@@ -111,7 +139,11 @@
 			);
 			name = TestApp;
 			packageProductDependencies = (
-				8E00943027CC6F7900E99725 /* StatementTap */,
+				8E90E3A32845FB2300C4AB07 /* BalanceTap */,
+				00F45A8F2833D95400749BD7 /* TPKeyboardAvoiding */,
+				00F45A992833F98D00749BD7 /* SDWebImageSVGCoder */,
+				00AF44AA28353AA9003F2656 /* RxCocoa */,
+				00AF44AC28353AA9003F2656 /* RxSwift */,
 			);
 			productName = TestApp;
 			productReference = 8E06A5BB256DEAFC009004DD /* TestApp.app */;
@@ -141,7 +173,10 @@
 			);
 			mainGroup = 8E06A5B2256DEAFB009004DD;
 			packageReferences = (
-				8E00942F27CC6F7900E99725 /* XCRemoteSwiftPackageReference "core-sdk-ios" */,
+				8E90E3A22845FB2300C4AB07 /* XCRemoteSwiftPackageReference "core-sdk-ios" */,
+				00F45A8E2833D95400749BD7 /* XCRemoteSwiftPackageReference "TPKeyboardAvoiding" */,
+				00F45A982833F98D00749BD7 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */,
+				00AF44A928353AA9003F2656 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 8E06A5BC256DEAFC009004DD /* Products */;
 			projectDirPath = "";
@@ -157,6 +192,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00F45A952833DD5400749BD7 /* Ubuntu-Regular.ttf in Resources */,
+				00F45A972833DD5400749BD7 /* Lato-Regular.ttf in Resources */,
+				00F45A962833DD5400749BD7 /* Lato-Bold.ttf in Resources */,
 				8E06A5CB256DEAFC009004DD /* LaunchScreen.storyboard in Resources */,
 				8E06A5C8256DEAFC009004DD /* Assets.xcassets in Resources */,
 				8E06A5C6256DEAFC009004DD /* Main.storyboard in Resources */,
@@ -173,6 +211,7 @@
 				8E06A5C3256DEAFC009004DD /* ViewController.swift in Sources */,
 				8E06A5BF256DEAFC009004DD /* AppDelegate.swift in Sources */,
 				8E06A5C1256DEAFC009004DD /* SceneDelegate.swift in Sources */,
+				000F5FB02847B35000AF0FBD /* CheckboxButton.swift in Sources */,
 				8EE1C1512583070C00FCB79C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,7 +379,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/TestApp/lib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.brankas.StatementTestApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brankas.BalanceTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INCLUDE_PATHS = "$(inherited) $(PROJECT_DIR)/TestApp/lib";
 				SWIFT_VERSION = 5.0;
@@ -374,7 +413,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/TestApp/lib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.brankas.StatementTestApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brankas.BalanceTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INCLUDE_PATHS = "$(inherited) $(PROJECT_DIR)/TestApp/lib";
 				SWIFT_VERSION = 5.0;
@@ -407,7 +446,31 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8E00942F27CC6F7900E99725 /* XCRemoteSwiftPackageReference "core-sdk-ios" */ = {
+		00AF44A928353AA9003F2656 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		00F45A8E2833D95400749BD7 /* XCRemoteSwiftPackageReference "TPKeyboardAvoiding" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/michaeltyson/TPKeyboardAvoiding";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		00F45A982833F98D00749BD7 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSVGCoder.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		8E90E3A22845FB2300C4AB07 /* XCRemoteSwiftPackageReference "core-sdk-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/brankas/core-sdk-ios";
 			requirement = {
@@ -418,10 +481,30 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8E00943027CC6F7900E99725 /* StatementTap */ = {
+		00AF44AA28353AA9003F2656 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8E00942F27CC6F7900E99725 /* XCRemoteSwiftPackageReference "core-sdk-ios" */;
-			productName = StatementTap;
+			package = 00AF44A928353AA9003F2656 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		00AF44AC28353AA9003F2656 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00AF44A928353AA9003F2656 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		00F45A8F2833D95400749BD7 /* TPKeyboardAvoiding */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00F45A8E2833D95400749BD7 /* XCRemoteSwiftPackageReference "TPKeyboardAvoiding" */;
+			productName = TPKeyboardAvoiding;
+		};
+		00F45A992833F98D00749BD7 /* SDWebImageSVGCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00F45A982833F98D00749BD7 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */;
+			productName = SDWebImageSVGCoder;
+		};
+		8E90E3A32845FB2300C4AB07 /* BalanceTap */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E90E3A22845FB2300C4AB07 /* XCRemoteSwiftPackageReference "core-sdk-ios" */;
+			productName = BalanceTap;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

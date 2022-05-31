@@ -8,6 +8,42 @@
         "branch" : "master",
         "revision" : "361908f384270c4d464089c680dc8f8490bc08fc"
       }
+    },
+    {
+      "identity" : "rxswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ReactiveX/RxSwift.git",
+      "state" : {
+        "revision" : "b4307ba0b6425c0ba4178e138799946c3da594f8",
+        "version" : "6.5.0"
+      }
+    },
+    {
+      "identity" : "sdwebimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/SDWebImage.git",
+      "state" : {
+        "revision" : "2e63d0061da449ad0ed130768d05dceb1496de44",
+        "version" : "5.12.5"
+      }
+    },
+    {
+      "identity" : "sdwebimagesvgcoder",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/SDWebImageSVGCoder.git",
+      "state" : {
+        "revision" : "afbe025cbdae37c20c144956fbabc07ddd5c0fc2",
+        "version" : "1.6.1"
+      }
+    },
+    {
+      "identity" : "tpkeyboardavoiding",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/michaeltyson/TPKeyboardAvoiding",
+      "state" : {
+        "revision" : "3217d6287a6b0ecb1db65a214a2e0fba9934e417",
+        "version" : "1.3.5"
+      }
     }
   ],
   "version" : 2
