@@ -214,7 +214,7 @@ class ViewController: UIViewController, CheckDelegate {
 
             let imageView = UIImageView(frame: CGRect(x: width - 40, y: 10, width: 30, height: 30))
             imageView.contentMode = .scaleAspectFit
-            imageView.sd_setImage(with: URL(string: $0.logoUrl), placeholderImage: UIImage(named: "ic_banking"))
+            imageView.sd_setImage(with: URL(string: $0.pngLogoUrl), placeholderImage: UIImage(named: "ic_banking"))
             view.addSubview(imageView)
             
             stackView.addArrangedSubview(view)
