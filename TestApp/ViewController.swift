@@ -7,7 +7,6 @@
 
 import UIKit
 import DirectTapFramework
-import SDWebImageSVGCoder
 import SDWebImage
 import RxSwift
 import RxCocoa
@@ -43,8 +42,13 @@ class ViewController: UIViewController, CheckDelegate {
     private var sourceBanks: [DirectBank] = []
     private var expiryDate = Date()
     private var subscribers: [Disposable] = []
+    private var searchSubscriber: Disposable?
+    private var searchByArr: [String] = ["Transaction ID", "Reference ID"]
+    private var menuArr: [String] = ["Checkout", "Search"]
+    private var searchBy = 0
 
 
+    // Checkout
     @IBOutlet weak var swUseRememberMe: UISwitch!
     @IBOutlet weak var swExpiryDate: UISwitch!
     @IBOutlet weak var swLogoURL: UISwitch!
@@ -72,6 +76,17 @@ class ViewController: UIViewController, CheckDelegate {
     @IBOutlet weak var tfExpiryDate: UITextField!
     @IBOutlet weak var btCheckout: UIButton!
     @IBOutlet weak var vProgressing: UIView!
+    @IBOutlet weak var vCheckout: UIStackView!
+    
+    @IBOutlet weak var tfMenu: UITextField!
+    
+    // Search
+    @IBOutlet weak var btSearch: UIButton!
+    @IBOutlet weak var btRetrieve: UIButton!
+    @IBOutlet weak var tfQuery: UITextField!
+    @IBOutlet weak var tfSearchBy: UITextField!
+    @IBOutlet weak var vSearch: UIStackView!
+    
 
     @IBAction func onAutoFillDetails(_ sender: Any) {
         tfFirstName.text = "First"
@@ -115,7 +130,7 @@ class ViewController: UIViewController, CheckDelegate {
         vProgressing.isHidden = false
         DirectTapSF.shared.initialize(apiKey: Constants.API_KEY, certPath: nil, isDebug: true)
         
-        let account = DirectAccount(country: countryCode, bankCode: sourceBank.bankCode == DirectBankCode.Dummy_Bank ? nil : sourceBank.bankCode)
+        let account = DirectAccount(country: countryCode, bankCode: sourceBank.bankCode.value == DirectBankCode.Dummy_Bank.value ? nil : sourceBank.bankCode)
         let amount = Amount(currency: countryCode == Country.PH ? Currency.php : Currency.idr, numInCents: String(Int64(Float(tfAmount.text ?? "")! * 100)))
         let customer = Customer(firstName: tfFirstName.text ?? "", lastName: tfLastName.text ?? "", email: tfEmailAddress.text ?? "", mobileNumber: tfMobileNumber.text ?? "")
         var client = Client()
@@ -144,32 +159,48 @@ class ViewController: UIViewController, CheckDelegate {
             vProgressing.isHidden = true
             print("Error: \(error)")
         }
-
+    }
+    
+    @IBAction func onRetrieveLastTransaction(_sender: Any) {
+        vProgressing.isHidden = false
+        DirectTapSF.shared.initialize(apiKey: Constants.API_KEY, certPath: nil, isDebug: true)
+        
+        DirectTapSF.shared.getLastTransaction(closure: { transaction, err in
+            self.onResult(data: transaction, error: err)
+            self.vProgressing.isHidden = true
+        })
+    }
+    
+    @IBAction func onRetrieveTransaction(_sender: Any) {
+        vProgressing.isHidden = false
+        DirectTapSF.shared.initialize(apiKey: Constants.API_KEY, certPath: nil, isDebug: true)
+        
+        if searchBy == 0 {
+            DirectTapSF.shared.getTransactionById(transactionId: tfQuery.text ?? "", closure: { transaction, err in
+                self.onResult(data: transaction, error: err)
+                self.vProgressing.isHidden = true
+            })
+        }
+        else {
+            DirectTapSF.shared.getTransactionByReferenceId(referenceId: tfQuery.text ?? "", closure: { transaction, err in
+                self.onResult(data: transaction, error: err)
+                self.vProgressing.isHidden = true
+            })
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        SDImageCodersManager.shared.addCoder(SDImageSVGCoder.shared)
-
         vSourceBank.isHidden = true
         vLogoURL.isHidden = true
         vExpiryDate.isHidden = true
-
-        let countryPicker = UIPickerView()
-        countryPicker.delegate = self
-        countryPicker.tag = 1
-        tfCountry.inputView = countryPicker
-
-        let destBankPicker = UIPickerView()
-        destBankPicker.delegate = self
-        destBankPicker.tag = 2
-        tfDestinationBank.inputView = destBankPicker
-
-        let sourceBankPicker = UIPickerView()
-        sourceBankPicker.delegate = self
-        sourceBankPicker.tag = 3
-        tfSourceBank.inputView = sourceBankPicker
+        
+        setPicker(textField: tfCountry, tag: 1)
+        setPicker(textField: tfDestinationBank, tag: 2)
+        setPicker(textField: tfSourceBank, tag: 3)
+        setPicker(textField: tfMenu, tag: 4)
+        setPicker(textField: tfSearchBy, tag: 5)
 
         let datePicker = UIDatePicker()
         datePicker.datePickerMode = .date
@@ -202,9 +233,16 @@ class ViewController: UIViewController, CheckDelegate {
         ).subscribe(onNext: { _ in
             self.formValidation()
         }))
+        
+        searchSubscriber = tfQuery.rx.controlEvent(.editingChanged).subscribe(onNext: { _ in
+            self.searchValidation()
+        })
 
         tfDestinationAccountID.text = Constants.DESTINATION_ACCOUNT_ID
         tfDestinationAccountID.sendActions(for: .editingChanged)
+        
+        self.btRetrieve.isEnabled = true
+        self.btRetrieve.backgroundColor = UIColor(red: 57/255, green: 128/255, blue: 196/255, alpha: 1)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -212,6 +250,7 @@ class ViewController: UIViewController, CheckDelegate {
 
         subscribers.forEach { $0.dispose() }
         subscribers.removeAll()
+        searchSubscriber?.dispose()
     }
 
     @objc func expiryDateChanged(datePicker: UIDatePicker) {
@@ -273,7 +312,7 @@ class ViewController: UIViewController, CheckDelegate {
         if "None" == destinationBank.title {return}
 
         vProgressing.isHidden = false
-        DirectTapSF.shared.initialize(apiKey: Constants.API_KEY, certPath: nil, isDebug: false)
+        DirectTapSF.shared.initialize(apiKey: Constants.API_KEY, certPath: nil, isDebug: true)
         DirectTapSF.shared.getSourceBanks(country: countryCode, destinationBank: destinationBank.bankCode) { banks, error in
             if let error = error {
                 self.showAlert(message: error)
@@ -285,23 +324,34 @@ class ViewController: UIViewController, CheckDelegate {
 
             banks.forEach { bank in
                 self.destinationBanks[Country.ID]?.enumerated().forEach { index, item in
-                    if item.bankCode == bank.bankCode {
+                    if item.bankCode.value == bank.bankCode.value {
                         self.destinationBanks[Country.ID]![index].logoUrl = bank.logoUrl
                     }
                 }
                 self.destinationBanks[Country.PH]?.enumerated().forEach { index, item in
-                    if item.bankCode == bank.bankCode {
+                    if item.bankCode.value == bank.bankCode.value {
                         self.destinationBanks[Country.PH]![index].logoUrl = bank.logoUrl
                     }
                 }
 
-                if self.destinationBank.bankCode == bank.bankCode {
+                if self.destinationBank.bankCode.value == bank.bankCode.value {
                     self.destinationBank.logoUrl = bank.logoUrl
                     self.ivDestinationBank.sd_setImage(with: URL(string: bank.logoUrl), placeholderImage: UIImage(named: "ic_banking"))
                 }
             }
-
         }
+    }
+    
+    private func searchValidation() {
+        guard let query = self.tfQuery.text, !query.isEmpty
+        else {
+            self.btCheckout.isEnabled = false
+            self.btCheckout.backgroundColor = UIColor(red: 157/255, green: 157/255, blue: 157/255, alpha: 1)
+            return
+        }
+        
+        self.btSearch.isEnabled = true
+        self.btSearch.backgroundColor = UIColor(red: 57/255, green: 128/255, blue: 196/255, alpha: 1)
     }
 
     private func formValidation() {
@@ -342,11 +392,11 @@ class ViewController: UIViewController, CheckDelegate {
             self.btCheckout.backgroundColor = UIColor(red: 57/255, green: 128/255, blue: 196/255, alpha: 1)
             return
         } else if "None" != sourceBank.title {
-            let min = destinationBank.bankCode == sourceBank.bankCode
+            let min = destinationBank.bankCode.value == sourceBank.bankCode.value
             ? Double(sourceBank.fundTransferLimit?.intrabankMinLimit.numInCents ?? "0.0") ?? 0.0
             : Double(sourceBank.fundTransferLimit?.interbankMinLimit.numInCents ?? "0.0") ?? 0.0
 
-            let max = destinationBank.bankCode == sourceBank.bankCode
+            let max = destinationBank.bankCode.value == sourceBank.bankCode.value
             ? Double(sourceBank.fundTransferLimit?.intrabankMaxLimit.numInCents ?? "0.0") ?? 0.0
             : Double(sourceBank.fundTransferLimit?.interbankMaxLimit.numInCents ?? "0.0") ?? 0.0
 
@@ -381,6 +431,8 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         case 1: return 2    // country selection
         case 2: return destinationBanks[countryCode]?.count ?? 0 // destination bank
         case 3: return sourceBanks.count // source bank
+        case 4: return menuArr.count
+        case 5: return searchByArr.count
         default: return 0
         }
     }
@@ -427,11 +479,26 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
             sourceBank = sourceBanks[row]
             tfSourceBank.text = sourceBank.title
             ivSourceBank.sd_setImage(with: URL(string: sourceBank.logoUrl), placeholderImage: UIImage(named: "ic_banking"))
-
+            
+        case 4: // menu
+            vCheckout.isHidden = row != 0
+            vSearch.isHidden = row != 1
+            tfMenu.text = menuArr[row]
+            
+        case 5: // search by
+            searchBy = row
+            tfQuery.placeholder = searchByArr[row]
+            tfSearchBy.text = searchByArr[row]
+            
         default: return
         }
 
-        formValidation()
+        if !vCheckout.isHidden {
+            formValidation()
+        }
+        else {
+            searchValidation()
+        }
     }
 
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
@@ -466,12 +533,31 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
             imageView.contentMode = .scaleAspectFit
             imageView.sd_setImage(with: URL(string: sourceBanks[row].logoUrl), placeholderImage: UIImage(named: "ic_banking"))
             view.addSubview(imageView)
+            
+        case 4: // menu
+            let label = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: 50 ))
+            label.font = UIFont(name: "Ubuntu-Regular", size: 14)
+            label.text = menuArr[row]
+            view.addSubview(label)
+            
+        case 5: // search by
+            let label = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: 50 ))
+            label.font = UIFont(name: "Ubuntu-Regular", size: 14)
+            label.text = searchByArr[row]
+            view.addSubview(label)
 
         default:
             return view
         }
 
         return view
+    }
+    
+    private func setPicker(textField: UITextField, tag: Int) {
+        let picker = UIPickerView()
+        picker.delegate = self
+        picker.tag = tag
+        textField.inputView = picker
     }
 
 }
