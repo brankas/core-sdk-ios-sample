@@ -128,7 +128,7 @@ class ViewController: UIViewController, CheckDelegate {
         if !checkAPIKey() {return}
 
         vProgressing.isHidden = false
-        DirectTapSF.shared.initialize(apiKey: Constants.API_KEY, certPath: nil, isDebug: true)
+        DirectTapSF.shared.initialize(apiKey: Constants.API_KEY, certPath: nil, isDebug: false)
         
         let account = DirectAccount(country: countryCode, bankCode: sourceBank.bankCode.value == DirectBankCode.Dummy_Bank.value ? nil : sourceBank.bankCode)
         let amount = Amount(currency: countryCode == Country.PH ? Currency.php : Currency.idr, numInCents: String(Int64(Float(tfAmount.text ?? "")! * 100)))
@@ -163,7 +163,7 @@ class ViewController: UIViewController, CheckDelegate {
     
     @IBAction func onRetrieveLastTransaction(_sender: Any) {
         vProgressing.isHidden = false
-        DirectTapSF.shared.initialize(apiKey: Constants.API_KEY, certPath: nil, isDebug: true)
+        DirectTapSF.shared.initialize(apiKey: Constants.API_KEY, certPath: nil, isDebug: false)
         
         DirectTapSF.shared.getLastTransaction(closure: { transaction, err in
             self.onResult(data: transaction, error: err)
@@ -173,7 +173,7 @@ class ViewController: UIViewController, CheckDelegate {
     
     @IBAction func onRetrieveTransaction(_sender: Any) {
         vProgressing.isHidden = false
-        DirectTapSF.shared.initialize(apiKey: Constants.API_KEY, certPath: nil, isDebug: true)
+        DirectTapSF.shared.initialize(apiKey: Constants.API_KEY, certPath: nil, isDebug: false)
         
         if searchBy == 0 {
             DirectTapSF.shared.getTransactionById(transactionId: tfQuery.text ?? "", closure: { transaction, err in
@@ -312,7 +312,7 @@ class ViewController: UIViewController, CheckDelegate {
         if "None" == destinationBank.title {return}
 
         vProgressing.isHidden = false
-        DirectTapSF.shared.initialize(apiKey: Constants.API_KEY, certPath: nil, isDebug: true)
+        DirectTapSF.shared.initialize(apiKey: Constants.API_KEY, certPath: nil, isDebug: false)
         DirectTapSF.shared.getSourceBanks(country: countryCode, destinationBank: destinationBank.bankCode) { banks, error in
             if let error = error {
                 self.showAlert(message: error)
@@ -400,7 +400,7 @@ class ViewController: UIViewController, CheckDelegate {
             ? Double(sourceBank.fundTransferLimit?.intrabankMaxLimit.numInCents ?? "0.0") ?? 0.0
             : Double(sourceBank.fundTransferLimit?.interbankMaxLimit.numInCents ?? "0.0") ?? 0.0
 
-            if 0.0 == amount || amount < min || amount > max {
+            if 0.0 == amount || (max != 0 && (amount < min || amount > max)) {
                 self.btCheckout.isEnabled = false
                 self.btCheckout.backgroundColor = UIColor(red: 157/255, green: 157/255, blue: 157/255, alpha: 1)
                 return
