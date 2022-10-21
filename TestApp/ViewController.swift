@@ -14,28 +14,28 @@ import RxCocoa
 class ViewController: UIViewController, CheckDelegate {
     typealias T = String
     
-    private var destinationBank: DirectBank = .init(bankCode: .Dummy_Bank, country: .PH, title: "None", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false)
-    private var sourceBank: DirectBank = .init(bankCode: .Dummy_Bank, country: .PH, title: "None", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false)
+    private var destinationBank: DirectBank = .init(bankCode: .Dummy_Bank, country: .PH, title: "None", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false, isEnabled: true)
+    private var sourceBank: DirectBank = .init(bankCode: .Dummy_Bank, country: .PH, title: "None", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false, isEnabled: true)
     private var countryCode: Country = Country.PH
 
     private var destinationBanks = [
         Country.ID: [
-            DirectBank(bankCode: .Dummy_Bank, country: .ID, title: "None", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false),
-            DirectBank(bankCode: .BCA, country: .ID, title: "BCA", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false),
-            DirectBank(bankCode: .BNI, country: .ID, title: "BNI", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false),
-            DirectBank(bankCode: .BRI, country: .ID, title: "BRI", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false),
-            DirectBank(bankCode: .Mandiri, country: .ID, title: "Mandiri", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false)
+            DirectBank(bankCode: .Dummy_Bank, country: .ID, title: "None", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false, isEnabled: true),
+            DirectBank(bankCode: .BCA, country: .ID, title: "BCA", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false, isEnabled: true),
+            DirectBank(bankCode: .BNI, country: .ID, title: "BNI", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false, isEnabled: true),
+            DirectBank(bankCode: .BRI, country: .ID, title: "BRI", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false, isEnabled: true),
+            DirectBank(bankCode: .Mandiri, country: .ID, title: "Mandiri", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false, isEnabled: true)
         ],
         Country.PH: [
-            DirectBank(bankCode: .Dummy_Bank, country: .PH, title: "None", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false),
-            DirectBank(bankCode: .BDO, country: .PH, title: "BDO", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false),
-            DirectBank(bankCode: .BPI, country: .PH, title: "BPI", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false),
-            DirectBank(bankCode: .EAST_WEST, country: .PH, title: "EastWest Bank", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false),
-            DirectBank(bankCode: .LAND_BANK, country: .PH, title: "LandBank", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false),
-            DirectBank(bankCode: .MB, country: .PH, title: "MetroBank", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false),
-            DirectBank(bankCode: .PNB, country: .PH, title: "PNB", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false),
-            DirectBank(bankCode: .RCBC, country: .PH, title: "RCBC", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false),
-            DirectBank(bankCode: .UB, country: .PH, title: "Union Bank", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false)
+            DirectBank(bankCode: .Dummy_Bank, country: .PH, title: "None", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false, isEnabled: true),
+            DirectBank(bankCode: .BDO, country: .PH, title: "BDO", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false, isEnabled: true),
+            DirectBank(bankCode: .BPI, country: .PH, title: "BPI", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false, isEnabled: true),
+            DirectBank(bankCode: .EAST_WEST, country: .PH, title: "EastWest Bank", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false, isEnabled: true),
+            DirectBank(bankCode: .LAND_BANK, country: .PH, title: "LandBank", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false, isEnabled: true),
+            DirectBank(bankCode: .MB, country: .PH, title: "MetroBank", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false, isEnabled: true),
+            DirectBank(bankCode: .PNB, country: .PH, title: "PNB", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false, isEnabled: true),
+            DirectBank(bankCode: .RCBC, country: .PH, title: "RCBC", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false, isEnabled: true),
+            DirectBank(bankCode: .UB, country: .PH, title: "Union Bank", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false, isEnabled: true)
         ]
     ]
 
@@ -320,7 +320,7 @@ class ViewController: UIViewController, CheckDelegate {
             }
 
             self.vProgressing.isHidden = true
-            self.sourceBanks.append(contentsOf: banks)
+            self.sourceBanks.append(contentsOf:banks.filter { $0.isEnabled })
 
             banks.forEach { bank in
                 self.destinationBanks[Country.ID]?.enumerated().forEach { index, item in
@@ -447,26 +447,26 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
                 tfCountry.text = "Indonesia"
                 countryCode = Country.ID
             }
-            destinationBank = .init(bankCode: .Dummy_Bank, country: .PH, title: "None", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false)
+            destinationBank = .init(bankCode: .Dummy_Bank, country: .PH, title: "None", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false, isEnabled: true)
             tfDestinationBank.text = "None"
             ivDestinationBank.image = UIImage(named: "ic_banking")
             vSourceBank.isHidden = true
-            sourceBank = .init(bankCode: .Dummy_Bank, country: .PH, title: "None", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false)
+            sourceBank = .init(bankCode: .Dummy_Bank, country: .PH, title: "None", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false, isEnabled: true)
             tfSourceBank.text = "None"
             ivSourceBank.image = UIImage(named: "ic_banking")
             sourceBanks = []
-            sourceBanks.append(.init(bankCode: .Dummy_Bank, country: .PH, title: "None", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false))
+            sourceBanks.append(.init(bankCode: .Dummy_Bank, country: .PH, title: "None", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false, isEnabled: true))
 
         case 2: // destination bank
             guard let bank = destinationBanks[countryCode]?[row] else {return}
             destinationBank = bank
             tfDestinationBank.text = bank.title
             ivDestinationBank.sd_setImage(with: URL(string: bank.logoUrl), placeholderImage: UIImage(named: "ic_banking"))
-            sourceBank = .init(bankCode: .Dummy_Bank, country: .PH, title: "None", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false)
+            sourceBank = .init(bankCode: .Dummy_Bank, country: .PH, title: "None", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false, isEnabled: true)
             tfSourceBank.text = "None"
             ivSourceBank.image = UIImage(named: "ic_banking")
             sourceBanks = []
-            sourceBanks.append(.init(bankCode: .Dummy_Bank, country: .PH, title: "None", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false))
+            sourceBanks.append(.init(bankCode: .Dummy_Bank, country: .PH, title: "None", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false, isEnabled: true))
 
             if "None" == destinationBank.title {
                 vSourceBank.isHidden = true
