@@ -11,6 +11,7 @@ import SDWebImageSVGCoder
 import SDWebImage
 import RxSwift
 import RxCocoa
+import AppTrackingTransparency
 
 class ViewController: UIViewController, CheckDelegate {
     typealias T = String
@@ -31,6 +32,7 @@ class ViewController: UIViewController, CheckDelegate {
     @IBOutlet weak var swAutoConsent: UISwitch! //false
     @IBOutlet weak var swBackButton: UISwitch! // true
     @IBOutlet weak var swRetrieveStatements: UISwitch! //false
+    @IBOutlet weak var swBalanceRetrieval: UISwitch! //false
     @IBOutlet weak var tfCountry: UITextField!
     @IBOutlet weak var vPersonalBanks: UIView!
     @IBOutlet weak var stPersonalBanks: UIStackView!
@@ -65,13 +67,20 @@ class ViewController: UIViewController, CheckDelegate {
 
         vProgressing.isHidden = false
 
-        var request = StatementTapRequest(country: countryCode, bankCodes: getCheckedBankCodes(), externalId: tfExternalId.text ?? "", successURL: tfSuccessURL.text ?? "", failURL: tfFailURL.text ?? "", organizationName: tfOrganizationName.text ?? "", redirectDuration: 60, browserMode: .WebView, dismissAlert: nil, isAutoConsent: swAutoConsent.isOn, useRememberMe: swUseRememberMe.isOn)
+        var request = StatementTapRequest(country: countryCode, bankCodes: getCheckedBankCodes(), externalId: tfExternalId.text ?? "", successURL: tfSuccessURL.text ?? "", failURL: tfFailURL.text ?? "", organizationName: tfOrganizationName.text ?? "", redirectDuration: 60, browserMode: .WebView, dismissAlert: nil, isAutoConsent: swAutoConsent.isOn, useRememberMe: swUseRememberMe.isOn, includeBalance: swBalanceRetrieval.isOn)
 
         if swRetrieveStatements.isOn {
             request.statementRetrievalRequest = StatementRetrievalRequest(startDate: startDate, endDate: endDate)
         }
 
-        StatementTapSF.shared.initialize(apiKey: Constants.API_KEY, certPath: nil, isDebug: false)
+        
+        StatementTapSF.shared.initialize(apiKey: Constants.API_KEY, certPath: nil, isDebug: true)
+// Use this initialize method if App Tracking Transparency is enabled or commented out in SceneDelegate
+//        if #available(iOS 14, *) {
+//            StatementTapSF.shared.initialize(apiKey: Constants.API_KEY, certPath: nil, isDebug: false, isLoggingEnabled: ATTrackingManager.trackingAuthorizationStatus == .authorized)
+//        } else {
+//            StatementTapSF.shared.initialize(apiKey: Constants.API_KEY, certPath: nil, isDebug: false)
+//        }
 
         do {
             try StatementTapSF.shared.checkout(statementTapRequest: request, vc: self, closure: { data, err in
@@ -117,7 +126,12 @@ class ViewController: UIViewController, CheckDelegate {
         df.dateFormat = "MM/dd/yyyy"
         tfStartDate.text = df.string(from: startDate)
         tfEndDate.text = df.string(from: endDate)
-
+        
+        swBalanceRetrieval.addTarget(self, action: #selector(balanceRetrievalChanged), for: UIControl.Event.valueChanged)
+        getEnabledBanks()
+    }
+    
+    @objc func balanceRetrievalChanged(balanceSwitch: UISwitch) {
         getEnabledBanks()
     }
 
@@ -213,8 +227,14 @@ class ViewController: UIViewController, CheckDelegate {
 
         vProgressing.isHidden = false
         
-        StatementTapSF.shared.initialize(apiKey: Constants.API_KEY, certPath: nil, isDebug: false)
-        StatementTapSF.shared.getEnabledBanks(country: countryCode) { data, err in
+        StatementTapSF.shared.initialize(apiKey: Constants.API_KEY, certPath: nil, isDebug: true)
+        // Use this initialize method if App Tracking Transparency is enabled or commented out in SceneDelegate
+//        if #available(iOS 14, *) {
+//            StatementTapSF.shared.initialize(apiKey: Constants.API_KEY, certPath: nil, isDebug: false, isLoggingEnabled: ATTrackingManager.trackingAuthorizationStatus == .authorized)
+//        } else {
+//            StatementTapSF.shared.initialize(apiKey: Constants.API_KEY, certPath: nil, isDebug: false)
+//        }
+        StatementTapSF.shared.getEnabledBanks(country: countryCode, includeBalance: swBalanceRetrieval.isOn) { data, err in
             self.vProgressing.isHidden = true
 
             if data.isEmpty {
@@ -302,40 +322,43 @@ class ViewController: UIViewController, CheckDelegate {
                 showAlert(message: "Statement ID: \(str)\nError: \(err)")
             }
             else {
-                showStatementList(statementId: str, message: "")
+                showStatementList(statementId: str, message: "", statementResponse: nil)
             }
-        } else if let statements = data as? [Statement] {
-            if statements.isEmpty {
-                showAlert(message: "Statement List\n\n\nList is Empty")
-                return
-            }
-
-            var statementId = ""
-            var message = ""
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "MM-dd-yyyy"
-
-            statements.forEach { statement in
-                statementId = statement.id
-                statement.transactions.forEach { transaction in
-                    let amount = transaction.amount
-                    message += "\n Account: \(statement.account.holderName)"
-                    message += "\n Transaction: (\(dateFormatter.string(from: transaction.date))) "
-                    message += String(describing: amount.currency)
-                    message += " \(Double(amount.numInCents) ?? 0 / 100)"
-                    message += " \(String(describing: transaction.type))"
+        } else if let response = data as? StatementResponse {
+            if let statements = response.statementList {
+                if statements.isEmpty {
+                    showAlert(message: "Statement List\n\n\nList is Empty")
+                    return
                 }
+                
+                var message = ""
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "MM-dd-yyyy"
+                
+                statements.forEach { statement in
+                    statement.transactions.forEach { transaction in
+                        let amount = transaction.amount
+                        message += "\n Account: \(statement.account.holderName)"
+                        message += "\n Transaction: (\(dateFormatter.string(from: transaction.date))) "
+                        message += String(describing: amount.currency)
+                        message += " \((Double(amount.numInCents) ?? 0) / 100)"
+                        message += " \(String(describing: transaction.type))"
+                    }
+                }
+                
+                showStatementList(statementId: response.statementId, message: message, statementResponse: response)
             }
-
-            showStatementList(statementId: statementId, message: message)
+            else if response.accountList != nil {
+                buildAccounts(statementResponse: response)
+            }
         } else {
             if let err = error {
                 showAlert(message: "Error: \(err)")
             }
         }
     }
-
-    private func showStatementList(statementId: String, message: String) {
+    
+    private func showStatementList(statementId: String, message: String, statementResponse: StatementResponse?) {
         let alert = UIAlertController(title: "Statement List", message: message, preferredStyle: UIAlertController.Style.alert)
 
         alert.addAction(UIAlertAction(title: "Download Statement", style: UIAlertAction.Style.default, handler: {_ in
@@ -348,19 +371,59 @@ class ViewController: UIViewController, CheckDelegate {
                 } else {
                     self.showAlert(message: err ?? "Download failed")
                 }
+                if let response = statementResponse {
+                    self.buildAccounts(statementResponse: response)
+                }
             }, enableSaving: true)
         }))
 
         alert.addAction(UIAlertAction(title: "Close", style: UIAlertAction.Style.default, handler: {_ in
             alert.dismiss(animated: true, completion: nil)
+            if let response = statementResponse {
+                self.buildAccounts(statementResponse: response)
+            }
+            else {
+                self.showAlert(message: "Statement Retrieval Successful!\nStatement Id: \(statementId)")
+            }
+            
         }))
-
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.present(alert, animated: true, completion: nil)
             self.vProgressing.isHidden = true
         }
     }
+    
+    private func buildAccounts(statementResponse: StatementResponse) {
+        if let accounts = statementResponse.accountList {
+            if accounts.isEmpty {
+                showAlert(message: "Account List\n\n\nList is Empty")
+                return
+            }
+            
+            var accountMessage = ""
+            
+            accounts.forEach { account in
+                accountMessage += "\n Account: \(account.holderName) (\(account.number))"
+                accountMessage += "\n Balance: \(account.balance.currency)\(Double(account.balance.numInCents) ?? 0 / 100)"
+            }
+            
+            showAccountList(balanceId: statementResponse.statementId, message: accountMessage)
+        }
+    }
+    
+    private func showAccountList(balanceId: String, message: String) {
+        let alert = UIAlertController(title: "Account List", message: message, preferredStyle: UIAlertController.Style.alert)
 
+        alert.addAction(UIAlertAction(title: "Close", style: UIAlertAction.Style.default, handler: {_ in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.present(alert, animated: true, completion: nil)
+            self.vProgressing.isHidden = true
+        }
+    }
 }
 
 extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
