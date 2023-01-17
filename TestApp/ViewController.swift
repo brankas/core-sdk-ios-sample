@@ -10,6 +10,7 @@ import DirectTapFramework
 import SDWebImage
 import RxSwift
 import RxCocoa
+import AppTrackingTransparency
 
 class ViewController: UIViewController, CheckDelegate {
     typealias T = String
@@ -17,6 +18,7 @@ class ViewController: UIViewController, CheckDelegate {
     private var destinationBank: DirectBank = .init(bankCode: .Dummy_Bank, country: .PH, title: "None", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false, isEnabled: true)
     private var sourceBank: DirectBank = .init(bankCode: .Dummy_Bank, country: .PH, title: "None", logoUrl: "", fundTransferLimit: .init(), fundTransferFee: .init(), isCorporate: false, isEnabled: true)
     private var countryCode: Country = Country.PH
+    private var language: Language = Language.English
 
     private var destinationBanks = [
         Country.ID: [
@@ -58,6 +60,7 @@ class ViewController: UIViewController, CheckDelegate {
     @IBOutlet weak var tfEmailAddress: UITextField!
     @IBOutlet weak var tfMobileNumber: UITextField!
     @IBOutlet weak var tfCountry: UITextField!
+    @IBOutlet weak var tfLanguage: UITextField!
     @IBOutlet weak var tfDestinationBank: UITextField!
     @IBOutlet weak var ivDestinationBank: UIImageView!
     @IBOutlet weak var vSourceBank: UIView!
@@ -129,6 +132,14 @@ class ViewController: UIViewController, CheckDelegate {
 
         vProgressing.isHidden = false
         DirectTapSF.shared.initialize(apiKey: Constants.API_KEY, certPath: nil, isDebug: false)
+       
+// Use this initialize method if App Tracking Transparency is enabled or commented out in SceneDelegate
+//        if #available(iOS 14, *) {
+//            DirectTapSF.shared.initialize(apiKey: Constants.API_KEY, certPath: nil, isDebug: false, isLoggingEnabled: ATTrackingManager.trackingAuthorizationStatus == .authorized)
+//        } else {
+//            // Fallback on earlier versions
+//            DirectTapSF.shared.initialize(apiKey: Constants.API_KEY, certPath: nil, isDebug: false)
+//        }
         
         let account = DirectAccount(country: countryCode, bankCode: sourceBank.bankCode.value == DirectBankCode.Dummy_Bank.value ? nil : sourceBank.bankCode)
         let amount = Amount(currency: countryCode == Country.PH ? Currency.php : Currency.idr, numInCents: String(Int64(Float(tfAmount.text ?? "")! * 100)))
@@ -137,6 +148,7 @@ class ViewController: UIViewController, CheckDelegate {
         client.displayName = tfOrganizationName.text ?? ""
         client.returnUrl = tfSuccessURL.text ?? ""
         client.failUrl = tfFailURL.text ?? ""
+        client.language = language
         
         if let logoURL = tfLogoURL.text, !logoURL.isEmpty {
             client.logoUrl = logoURL
@@ -201,6 +213,7 @@ class ViewController: UIViewController, CheckDelegate {
         setPicker(textField: tfSourceBank, tag: 3)
         setPicker(textField: tfMenu, tag: 4)
         setPicker(textField: tfSearchBy, tag: 5)
+        setPicker(textField: tfLanguage, tag: 6)
 
         let datePicker = UIDatePicker()
         datePicker.datePickerMode = .date
@@ -433,6 +446,7 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         case 3: return sourceBanks.count // source bank
         case 4: return menuArr.count
         case 5: return searchByArr.count
+        case 6: return 2
         default: return 0
         }
     }
@@ -490,6 +504,15 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
             tfQuery.placeholder = searchByArr[row]
             tfSearchBy.text = searchByArr[row]
             
+        case 6: // language
+            if 0 == row {
+                tfLanguage.text = "English"
+                language = Language.English
+            } else {
+                tfLanguage.text = "Indonesian"
+                language = Language.Indonesian
+            }
+            
         default: return
         }
 
@@ -544,6 +567,12 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
             let label = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: 50 ))
             label.font = UIFont(name: "Ubuntu-Regular", size: 14)
             label.text = searchByArr[row]
+            view.addSubview(label)
+            
+        case 6: // country selection
+            let label = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: 50 ))
+            label.font = UIFont(name: "Ubuntu-Regular", size: 14)
+            label.text = 0 == row ? "English" : "Indonesian"
             view.addSubview(label)
 
         default:
