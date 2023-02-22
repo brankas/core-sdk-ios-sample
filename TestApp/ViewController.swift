@@ -74,7 +74,7 @@ class ViewController: UIViewController, CheckDelegate {
         }
 
         
-        StatementTapSF.shared.initialize(apiKey: Constants.API_KEY, certPath: nil, isDebug: true)
+        StatementTapSF.shared.initialize(apiKey: Constants.API_KEY, certPath: nil, isDebug: false)
 // Use this initialize method if App Tracking Transparency is enabled or commented out in SceneDelegate
 //        if #available(iOS 14, *) {
 //            StatementTapSF.shared.initialize(apiKey: Constants.API_KEY, certPath: nil, isDebug: false, isLoggingEnabled: ATTrackingManager.trackingAuthorizationStatus == .authorized)
@@ -227,7 +227,7 @@ class ViewController: UIViewController, CheckDelegate {
 
         vProgressing.isHidden = false
         
-        StatementTapSF.shared.initialize(apiKey: Constants.API_KEY, certPath: nil, isDebug: true)
+        StatementTapSF.shared.initialize(apiKey: Constants.API_KEY, certPath: nil, isDebug: false)
         // Use this initialize method if App Tracking Transparency is enabled or commented out in SceneDelegate
 //        if #available(iOS 14, *) {
 //            StatementTapSF.shared.initialize(apiKey: Constants.API_KEY, certPath: nil, isDebug: false, isLoggingEnabled: ATTrackingManager.trackingAuthorizationStatus == .authorized)
