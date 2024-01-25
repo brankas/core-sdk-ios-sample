@@ -33,6 +33,7 @@ class ViewController: UIViewController, CheckDelegate {
     @IBOutlet weak var swBackButton: UISwitch! // true
     @IBOutlet weak var swRetrieveStatements: UISwitch! //false
     @IBOutlet weak var swBalanceRetrieval: UISwitch! //false
+    @IBOutlet weak var enablePdfUpload: UISwitch! //false
     @IBOutlet weak var tfCountry: UITextField!
     @IBOutlet weak var vPersonalBanks: UIView!
     @IBOutlet weak var stPersonalBanks: UIStackView!
@@ -67,7 +68,7 @@ class ViewController: UIViewController, CheckDelegate {
 
         vProgressing.isHidden = false
 
-        var request = StatementTapRequest(country: countryCode, bankCodes: getCheckedBankCodes(), externalId: tfExternalId.text ?? "", successURL: tfSuccessURL.text ?? "", failURL: tfFailURL.text ?? "", organizationName: tfOrganizationName.text ?? "", redirectDuration: 60, browserMode: .WebView, dismissAlert: nil, isAutoConsent: swAutoConsent.isOn, useRememberMe: swUseRememberMe.isOn, includeBalance: swBalanceRetrieval.isOn)
+        var request = StatementTapRequest(country: countryCode, bankCodes: getCheckedBankCodes(), externalId: tfExternalId.text ?? "", successURL: tfSuccessURL.text ?? "", failURL: tfFailURL.text ?? "", organizationName: tfOrganizationName.text ?? "", redirectDuration: 60, browserMode: .WebView, dismissAlert: nil, isAutoConsent: swAutoConsent.isOn, useRememberMe: swUseRememberMe.isOn, includeBalance: swBalanceRetrieval.isOn, hasPdfUpload: enablePdfUpload.isOn)
 
         if swRetrieveStatements.isOn {
             request.statementRetrievalRequest = StatementRetrievalRequest(startDate: startDate, endDate: endDate)
