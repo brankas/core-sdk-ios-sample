@@ -165,7 +165,7 @@ class ViewController: UIViewController, CheckDelegate {
 
         do {
             try DirectTapSF.shared.checkoutWithinSameScreen(tapRequest: request, vc: self, closure: { transaction, err in
-                self.onResult(data: transaction, error: err)
+                self.onResultCheckout(data: transaction, error: err)
             }, showWithinSameScreen: true, showBackButton: swBackButton.isOn)
         } catch {
             vProgressing.isHidden = true
@@ -292,6 +292,26 @@ class ViewController: UIViewController, CheckDelegate {
         
         if let message = error {
             showAlert(message: "Error: \(message)")
+        }
+    }
+    
+    private func onResultCheckout(data: Transaction?, error: DirectTapError?) {
+        if let transaction = data {
+            let date = DateFormatter()
+            date.dateFormat = "MMMM dd YYYY"
+
+            let bankFee = Float(transaction.bankFee.numInCents) ?? 0 / 100
+            let amount = Float(transaction.amount.numInCents) ?? 0 / 100
+            let finishedDate = date.string(from: transaction.finishedDate)
+
+            let fee = "\(transaction.bankFee.currency) \(bankFee)"
+            let payment = "\(transaction.amount.currency) \(amount)"
+
+            showAlert(message: "TRANSACTION (\(transaction.id))\nReference ID: \(transaction.referenceId)\nStatus: \(transaction.status)\nStatus Code: \(transaction.statusMessage ?? "") (\(transaction.statusCode))\nBank: \(transaction.bankCode) (\(transaction.country))\nAmount: \(payment)\nBank Fee:\(fee)\nDate: \(finishedDate)")
+        }
+        
+        if let directTapError = error {
+            showAlert(message: "Error: \(directTapError.errorCode) - \(directTapError.errorMessage)")
         }
     }
     
